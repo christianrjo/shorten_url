@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><center>Please Find Short Url</center></h1>
+  <h3><center>Size does matter!</center></h3>
+
+  <table>
+    <tr>
+<form action="/urls" method="post"><center>
+  <input type="text" name="long_link" size=50>
+  <input type="submit" value='Shorten it!'> 
+</center></form><br><br>
+
+<!-- list of short urls in descending order need to be printed here -->
+  <%  Url.all.each do |url| %>
+    <a href="/<%= url.short_url %>" ><%= url.short_url %></a><br><br>
+  <% end  %>
+
+</div>
